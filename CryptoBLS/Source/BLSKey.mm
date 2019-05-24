@@ -15,6 +15,10 @@
 // MARK: - Verification
 
 + (BOOL)verify:(NSData *)messageDigest publicKey:(NSData *)publicKeyData signature:(NSData *)signature {
+    if ([messageDigest length] < 32 || [publicKeyData length] < 48 || [signature length] < 96) {
+        // wrong data, when try make pointers on vars catch fatal error
+        return false;
+    }
     UInt256 message = *(UInt256 *) messageDigest.bytes;
     UInt384 pubKey = *(UInt384 *) publicKeyData.bytes;
     UInt768 sig = *(UInt768 *) signature.bytes;
