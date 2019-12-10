@@ -18,7 +18,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.source = { git: 'https://github.com/horizontalsystems/crypto-bls-ios.git', tag: "#{spec.version}" }
   spec.source_files = 'CryptoBLS/**/*.{h,m,mm,swift}'
-  spec.public_header_files = 'CryptoBLS/**/*.h'
 
   spec.libraries = 'c++'
 
