@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   spec.source_files = ['CryptoBLS/**/*.{h,m,mm,swift}', 'Libraries/bls/include/**/*.{h,hpp}']
   spec.public_header_files = 'CryptoBLS/**/*.h'
 
-  spec.frameworks = 'libc++'
+  spec.libraries = 'c++'
 
   spec.preserve_paths = ['Libraries']
   spec.header_dir = 'CryptoBLS'
