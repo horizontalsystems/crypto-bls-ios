@@ -22,7 +22,6 @@ Pod::Spec.new do |spec|
   spec.libraries = 'c++'
 
   spec.preserve_paths = ['Libraries']
-  spec.header_dir = 'CryptoBLS'
   spec.vendored_libraries  = ['Libraries/bls/lib/libbls_ios.a', 'Libraries/bls/lib/libgmp_ios.a', 'Libraries/bls/lib/librelic_ios.a']
 
   spec.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES',
